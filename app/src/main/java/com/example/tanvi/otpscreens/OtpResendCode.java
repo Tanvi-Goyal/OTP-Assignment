@@ -6,12 +6,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.poovam.pinedittextfield.LinePinField;
+
 public class OtpResendCode extends AppCompatActivity {
+
+     LinePinField linePinField ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_resend_code);
+
     }
 
     @Override

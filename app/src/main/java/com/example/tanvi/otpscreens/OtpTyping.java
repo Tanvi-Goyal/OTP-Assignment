@@ -1,10 +1,15 @@
 package com.example.tanvi.otpscreens;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.autofill.AutofillValue;
 import android.widget.Toast;
 
 import com.poovam.pinedittextfield.LinePinField;
@@ -14,6 +19,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class OtpTyping extends AppCompatActivity {
 
+
+    @TargetApi(Build.VERSION_CODES.O)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +29,9 @@ public class OtpTyping extends AppCompatActivity {
 
 
         final LinePinField linePinField = findViewById(R.id.lineField);
+
         linePinField.setOnTextCompleteListener(new PinField.OnTextCompleteListener() {
+
             @Override
             public boolean onTextComplete (@NotNull String enteredText) {
                 Toast.makeText(OtpTyping.this,enteredText,Toast.LENGTH_SHORT).show();

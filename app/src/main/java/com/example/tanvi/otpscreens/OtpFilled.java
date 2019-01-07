@@ -5,13 +5,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.poovam.pinedittextfield.LinePinField;
+import com.poovam.pinedittextfield.PinField;
+
+import org.jetbrains.annotations.NotNull;
+
+import static com.example.tanvi.otpscreens.R.drawable.buttonshapeblue;
 
 public class OtpFilled extends AppCompatActivity {
 
+    Button button;
+    View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_filled);
+
+        button = findViewById(R.id.proceedbutton);
+        view = findViewById(R.id.filled_view);
+
+        final LinePinField linePinField = findViewById(R.id.lineField);
+
+        linePinField.setOnTextCompleteListener(new PinField.OnTextCompleteListener() {
+
+            @Override
+            public boolean onTextComplete (@NotNull String enteredText) {
+                view.setVisibility(View.VISIBLE);
+                button.setBackgroundResource(R.drawable.buttonshapeblue);
+                return true; // Return true to keep the keyboard open else return false to close the keyboard
+            }
+        });
     }
 
     @Override

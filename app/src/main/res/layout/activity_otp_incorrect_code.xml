@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtpIncorrectCode">
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    tools:context=".OtpResendCode">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verification_text"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verification_code"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verification_number"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.poovam.pinedittextfield.LinePinField
+            android:id="@+id/lineField"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:textSelectHandle="@drawable/text_handle"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            app:bottomTextPaddingDp="10dp"
+            app:distanceInBetween="8dp"
+            app:highlightColor="@color/yellow"
+            app:highlightEnabled="true"
+            app:highlightSingleFieldMode="true"
+            app:isCursorEnabled="true"
+            app:noOfFields="6" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/incorrect_icon"
+            android:visibility="invisible"
+            android:src="@drawable/ic_clear_black_24dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Incorrect Code"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/incorrect_text"
+        android:visibility="invisible"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/proceedbutton"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:text="Proceed" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Still haven't recieve the code? "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:text="Resend Code"/>
+    </LinearLayout>
+</LinearLayout>
