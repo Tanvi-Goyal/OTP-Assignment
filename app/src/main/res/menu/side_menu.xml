@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="OTP Typing"
+        android:id="@+id/otp_typing"/>
+
+    <item android:title="OTP Resend Code"
+        android:id="@+id/otp_resend_code"/>
+
+    <item android:title="OTP Code Resent"
+        android:id="@+id/otp_code_resent"/>
+
+    <item android:title="OTP Empty"
+        android:id="@+id/otp_empty"/>
+
+    <item android:title="OTP Filled"
+        android:id="@+id/otp_filled"/>
+
+    <item android:title="OTP Incorrect Code"
+        android:id="@+id/otp_incorrect_code"/>
+
+
+</menu>
