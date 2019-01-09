@@ -19,6 +19,12 @@ public class OtpResendCode extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.side_menu , menu);
@@ -55,6 +61,9 @@ public class OtpResendCode extends AppCompatActivity {
                 startActivity(new Intent(OtpResendCode.this , OtpIncorrectCode.class));
                 break;
 
+            case R.id.razorpay :
+                startActivity(new Intent(OtpResendCode.this , RazorPayActivity.class));
+                break;
         }
 
         return true;

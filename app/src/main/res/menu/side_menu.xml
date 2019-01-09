@@ -19,5 +19,7 @@
     <item android:title="OTP Incorrect Code"
         android:id="@+id/otp_incorrect_code"/>
 
+    <item android:title="RazorPay Integration"
+        android:id="@+id/razorpay"/>
 
 </menu>

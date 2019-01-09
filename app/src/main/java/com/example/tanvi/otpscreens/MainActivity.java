@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this , OtpIncorrectCode.class));
                 break;
 
+            case R.id.razorpay :
+                startActivity(new Intent(MainActivity.this , RazorPayActivity.class));
+                break;
+
         }
 
         return true;

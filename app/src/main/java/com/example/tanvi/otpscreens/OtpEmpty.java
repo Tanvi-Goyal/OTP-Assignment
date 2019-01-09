@@ -14,6 +14,13 @@ public class OtpEmpty extends AppCompatActivity {
         setContentView(R.layout.activity_otp_empty);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.side_menu , menu);
@@ -48,6 +55,10 @@ public class OtpEmpty extends AppCompatActivity {
 
             case R.id.otp_incorrect_code :
                 startActivity(new Intent(OtpEmpty.this , OtpIncorrectCode.class));
+                break;
+
+            case R.id.razorpay :
+                startActivity(new Intent(OtpEmpty.this , RazorPayActivity.class));
                 break;
 
         }

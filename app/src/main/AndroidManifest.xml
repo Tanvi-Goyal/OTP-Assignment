@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tanvi.otpscreens">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-sdk tools:overrideLibrary="com.razorpay" />
 
     <application
         android:allowBackup="true"
@@ -15,13 +20,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_T5OatsiHS7l8P8" />
         <activity android:name=".OtpTyping" />
         <activity android:name=".OtpResendCode" />
         <activity android:name=".OtpResentCode" />
         <activity android:name=".OtpEmpty" />
         <activity android:name=".OtpFilled" />
-        <activity android:name=".OtpIncorrectCode"></activity>
+        <activity android:name=".OtpIncorrectCode" />
+        <activity android:name=".RazorPayActivity"></activity>
     </application>
 
 </manifest>

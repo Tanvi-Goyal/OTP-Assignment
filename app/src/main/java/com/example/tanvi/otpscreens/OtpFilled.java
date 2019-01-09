@@ -41,6 +41,13 @@ public class OtpFilled extends AppCompatActivity {
         });
     }
 
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.side_menu , menu);
@@ -77,6 +84,9 @@ public class OtpFilled extends AppCompatActivity {
                 startActivity(new Intent(OtpFilled.this , OtpIncorrectCode.class));
                 break;
 
+            case R.id.razorpay :
+                startActivity(new Intent(OtpFilled.this , RazorPayActivity.class));
+                break;
         }
 
         return true;
