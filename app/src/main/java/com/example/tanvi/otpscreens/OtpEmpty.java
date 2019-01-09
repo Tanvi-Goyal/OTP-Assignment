@@ -1,17 +1,37 @@
 package com.example.tanvi.otpscreens;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.TextureView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class OtpEmpty extends AppCompatActivity {
 
+    TextView counter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_empty);
+
+        counter = findViewById(R.id.counter);
+
+        new CountDownTimer(30000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                counter.setText( millisUntilFinished / 1000 + " seconds ");
+                //here you can have your logic to set text to edittext
+            }
+
+            public void onFinish() {
+                Toast.makeText(OtpEmpty.this, "Time to resend code", Toast.LENGTH_SHORT).show();
+            }
+
+        }.start();
     }
 
 

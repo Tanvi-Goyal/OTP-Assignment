@@ -45,7 +45,7 @@
         android:inputType="number"
         android:layout_gravity="center"
         android:textSelectHandle="@drawable/text_handle"
-        android:textSize="16sp"
+        android:textSize="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         app:bottomTextPaddingDp="10dp"
